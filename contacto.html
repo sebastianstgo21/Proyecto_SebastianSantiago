@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Santiago Pest Control ofrece servicios profesionales de control y prevención de plagas para hogares y negocios en Puerto Rico.">
+    <title>Santiago Pest Control - Contacto</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <script src="js/app.js" defer></script>
+</head>
+<body>
+<header class="site-header">
+    <div class="contenedor encabezado">
+        <a class="logo-area" href="index.html" aria-label="Inicio Santiago Pest Control">
+            <img src="img/logo.png" alt="Logo de Santiago Pest Control" class="logo">
+            <div>
+                <h1>Santiago Pest Control</h1>
+                <p class="slogan">Protegemos tu hogar y tu negocio</p>
+            </div>
+        </a>
+
+        <button class="menu-toggle" type="button" aria-label="Abrir menú" aria-expanded="false">☰</button>
+
+        <nav class="nav-principal" aria-label="Navegación principal">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="sobre-nosotros.html">Sobre Nosotros</a></li>
+                <li><a href="servicios.html">Servicios</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main class="pagina-contacto">
+    <section class="contenedor titulo-pagina pagina-intro">
+        <span class="etiqueta">Comunícate con nosotros</span>
+        <h2>Contáctanos</h2>
+        <p>Estamos listos para ayudarte y orientarte sobre el servicio que necesitas.</p>
+    </section>
+
+    <section class="contenedor contenido-contacto">
+        <div class="info-contacto caja">
+            <h3>Información de contacto</h3>
+            <p><strong>Whatsapp:</strong> 787-677-8845</p>
+            <p><strong>Correo electrónico:</strong> santiagopestcontrol1@gmail.com</p>
+            <p><strong>Horario:</strong> Lunes a sábado, 7:00 AM - 4:00 PM</p>
+            <p><strong>Ubicación:</strong> Área Sur, Puerto Rico</p>
+
+            <h3>¿Por qué contactarnos?</h3>
+            <p>Ofrecemos un servicio confiable, responsable y orientado a la seguridad de nuestros clientes. Atendemos problemas de plagas en hogares y negocios con seriedad y compromiso.</p>
+        </div>
+
+        <div class="formulario-contacto caja">
+            <h3>Envíanos un mensaje</h3>
+            <form id="formulario-contacto" novalidate>
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+
+                <label for="telefono">Teléfono:</label>
+                <input type="tel" id="telefono" name="telefono" required>
+
+                <label for="email">Correo electrónico:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="servicio">Servicio que le interesa:</label>
+                <select id="servicio" name="servicio">
+                    <option>Control de cucarachas</option>
+                    <option>Control de hormigas</option>
+                    <option>Control de ratones</option>
+                    <option>Control de garrapatas</option>
+                    <option>Fumigación general</option>
+                    <option>Servicio especializado</option>
+                </select>
+
+                <label for="mensaje">Mensaje:</label>
+                <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+
+                <button type="submit" class="boton">Enviar</button>
+                <p id="mensaje-formulario" class="mensaje-formulario" role="status"></p>
+            </form>
+        </div>
+    </section>
+</main>
+<footer>
+    <div class="contenedor footer-grid">
+        <p><strong>Teléfono:</strong> 787-677-8845</p>
+        <p><strong>Email:</strong> santiagopestcontrol1@gmail.com</p>
+        <p>&copy; 2026 Santiago Pest Control. Todos los derechos reservados.</p>
+    </div>
+</footer>
+</body>
+</html>

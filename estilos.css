@@ -1,0 +1,218 @@
+/* Estilos principales - Santiago Pest Control */
+:root {
+    --verde: #1f8f3a;
+    --verde-oscuro: #145f27;
+    --verde-suave: #f3fff5;
+    --gris-claro: #f7f7f7;
+    --texto: #222;
+    --sombra: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+* { box-sizing: border-box; }
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    background-color: #ffffff;
+    color: var(--texto);
+    line-height: 1.6;
+}
+
+.contenedor {
+    width: min(1120px, 92%);
+    margin: 0 auto;
+}
+
+.site-header {
+    background-color: white;
+    border-bottom: 4px solid var(--verde);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.encabezado {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    padding: 16px 0;
+}
+
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    color: var(--texto);
+    text-decoration: none;
+}
+
+.logo { width: 92px; height: auto; }
+
+.logo-area h1 {
+    margin: 0;
+    font-size: clamp(1.4rem, 2.4vw, 2rem);
+}
+
+.slogan {
+    margin: 2px 0 0;
+    color: var(--verde-oscuro);
+    font-weight: 700;
+}
+
+.menu-toggle {
+    display: none;
+    border: 0;
+    background: var(--verde);
+    color: white;
+    font-size: 1.3rem;
+    border-radius: 10px;
+    padding: 8px 12px;
+    cursor: pointer;
+}
+
+.nav-principal ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-principal a,
+.boton {
+    display: inline-block;
+    text-decoration: none;
+    background-color: var(--verde);
+    color: white;
+    padding: 10px 18px;
+    border-radius: 999px;
+    font-weight: 700;
+    border: 0;
+    cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.nav-principal a:hover,
+.nav-principal a.activo,
+.boton:hover { background-color: var(--verde-oscuro); transform: translateY(-1px); }
+
+.banner {
+    background: linear-gradient(135deg, var(--verde-suave), #ffffff);
+    border-bottom: 1px solid #e8f3ea;
+}
+
+.titulo-pagina {
+    text-align: center;
+    padding: 56px 20px;
+}
+
+.titulo-pagina h2 {
+    color: var(--verde-oscuro);
+    font-size: clamp(2rem, 5vw, 3.4rem);
+    margin: 10px 0;
+    line-height: 1.1;
+}
+
+.titulo-pagina p {
+    max-width: 780px;
+    margin: 0 auto 24px;
+    font-size: clamp(1rem, 2vw, 1.15rem);
+}
+
+.etiqueta {
+    color: var(--verde);
+    font-weight: 800;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+}
+
+.seccion, .pagina { padding: 42px 0; }
+
+.pagina-intro { padding-bottom: 24px; }
+
+.caja {
+    background-color: white;
+    border: 1px solid #e7e7e7;
+    border-radius: 18px;
+    padding: 26px;
+    box-shadow: var(--sombra);
+}
+
+.caja h3 { color: var(--verde-oscuro); margin-top: 0; font-size: 1.35rem; }
+
+.grande { max-width: 920px; margin: 0 auto 28px; }
+.texto-centrado { text-align: center; font-size: 1.08rem; }
+
+.tarjetas-resumen,
+.info-principal,
+.servicios-grid,
+.contenido-contacto {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.servicios-grid,
+.contenido-contacto { grid-template-columns: repeat(2, 1fr); }
+
+.servicio-card { text-align: center; }
+.boton.secundario { margin-top: 10px; }
+
+.lista-servicios {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px 18px;
+    padding-left: 20px;
+    margin: 18px 0 24px;
+}
+
+.lista-servicios li { font-weight: 700; }
+
+.formulario-contacto form { display: grid; gap: 8px; }
+
+.formulario-contacto label { font-weight: 700; margin-top: 8px; }
+
+.formulario-contacto input,
+.formulario-contacto select,
+.formulario-contacto textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #cccccc;
+    border-radius: 10px;
+    font: inherit;
+}
+
+.mensaje-formulario { color: var(--verde-oscuro); font-weight: 700; margin: 8px 0 0; }
+
+footer {
+    text-align: center;
+    background-color: var(--verde);
+    color: white;
+    padding: 22px 0;
+    margin-top: 30px;
+}
+
+.footer-grid p { margin: 4px 0; }
+
+@media (max-width: 860px) {
+    .encabezado { flex-wrap: wrap; }
+    .menu-toggle { display: inline-block; margin-left: auto; }
+    .nav-principal { display: none; width: 100%; }
+    .nav-principal.abierto { display: block; }
+    .nav-principal ul { flex-direction: column; align-items: stretch; }
+    .nav-principal a { width: 100%; text-align: center; }
+    .tarjetas-resumen, .info-principal, .servicios-grid, .contenido-contacto { grid-template-columns: 1fr; }
+    .titulo-pagina { padding: 42px 14px; }
+}
+
+@media (max-width: 560px) {
+    .logo-area { align-items: center; }
+    .logo { width: 72px; }
+    .slogan { font-size: 0.9rem; }
+    .caja { padding: 20px; }
+    .lista-servicios { grid-template-columns: 1fr; }
+    footer { font-size: 0.92rem; }
+}
